@@ -1,62 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
 
     <LinearLayout
-        android:layout_width="match_parent"
         android:orientation="horizontal"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Beer"
-        android:id="@+id/button1"
-        android:layout_weight="1"
-        android:onClick="beerClicked"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="125dp">
 
-        <Button
+            <Button
+                android:layout_width="115dp"
+                android:layout_height="wrap_content"
+                android:text="Wine"
+                android:id="@+id/button4"
+                android:layout_weight="0.13"
+                android:layout_gravity="right|center_vertical" />
+
+            <Button
+                android:layout_width="121dp"
+                android:layout_height="wrap_content"
+                android:text="Beer"
+                android:id="@+id/button3"
+                android:layout_weight="0.14"
+                android:onClick="beerClicked"
+                android:layout_gravity="left|center_vertical" />
+
+            <Button
+                android:layout_width="104dp"
+                android:layout_height="wrap_content"
+                android:text="Coffee"
+                android:id="@+id/button5"
+                android:layout_gravity="center" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:layout_weight="1.16">
+
+        <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/button2"
-            android:layout_weight="1"/>
-        <Button
+            android:layout_height="200dp"
+            android:src="@drawable/beerbottle"
+            android:id="@+id/arrow"
+            android:layout_gravity="center" />
+
+        <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/button3"
-            android:layout_weight="1"/>
+            android:layout_height="200dp"
+            android:src="@drawable/beerwallsmall"
+            android:id="@+id/beerwallsmall" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="106dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="31dp"
+                android:text="api content"
+                android:id="@+id/distance"/>
+        </FrameLayout>
 
     </LinearLayout>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="get location"
-        android:id="@+id/button4"
-        android:onClick="function"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="api call"
-        android:onClick="apiCall"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="hello"
-        android:id="@+id/text"/>
-
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        android:src="@drawable/beerbottle"
-        android:id="@+id/arrow"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="api content"
-        android:id="@+id/distance"/>
 
 </LinearLayout>
