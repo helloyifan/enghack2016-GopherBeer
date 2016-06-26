@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">GopherBeer</string>
+    <string name="title_activity_main">main</string>
 </resources>
